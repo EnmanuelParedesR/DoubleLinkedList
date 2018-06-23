@@ -8,6 +8,13 @@ namespace Video_Kata
 {
     public class DLinkedList
     {
+        public class program
+        {
+            public static void Main(String[] args)
+            {
+
+            }
+        }
 
         public class DLinkNode
         {
@@ -16,20 +23,20 @@ namespace Video_Kata
 
             public DLinkNode(String Value)
             {
-               this.Value = Value;
+                this.Value = Value;
             }
 
-            
+
         }
 
-        public DLinkNode Head,Tail;
+        public DLinkNode Head, Tail;
         public int Size { get; private set; }
 
         public void Add(String value)
         {
             DLinkNode NewNode = new DLinkNode(value);
 
-            if(Size == 0)
+            if (Size == 0)
             {
                 Head = Tail = NewNode;
                 Size++;
@@ -59,8 +66,8 @@ namespace Video_Kata
                     cur = cur.next;
                 }
             }
-           
-            return null;   
+
+            return null;
         }
 
         public void Delete(String Value)
@@ -127,7 +134,7 @@ namespace Video_Kata
             if (L.Size == 0)
                 return;
 
-           if(this.Size == 0)
+            if (this.Size == 0)
             {
                 this.Head = L.Head;
                 this.Tail = L.Tail;

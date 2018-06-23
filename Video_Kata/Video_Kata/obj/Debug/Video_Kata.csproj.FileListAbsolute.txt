@@ -3,3 +3,8 @@ c:\users\ema\documents\visual studio 2017\Projects\Video_Kata\Video_Kata\obj\Deb
 c:\users\ema\documents\visual studio 2017\Projects\Video_Kata\Video_Kata\obj\Debug\Video_Kata.pdb
 c:\users\ema\documents\visual studio 2017\Projects\Video_Kata\Video_Kata\bin\Debug\Video_Kata.exe
 c:\users\ema\documents\visual studio 2017\Projects\Video_Kata\Video_Kata\obj\Debug\Video_Kata.exe
+C:\Users\ema\Desktop\GitHub\DoubleLinkedList\Video_Kata\Video_Kata\obj\Debug\Video_Kata.exe
+C:\Users\ema\Desktop\GitHub\DoubleLinkedList\Video_Kata\Video_Kata\obj\Debug\Video_Kata.pdb
+C:\Users\ema\Desktop\GitHub\DoubleLinkedList\Video_Kata\Video_Kata\bin\Debug\Video_Kata.exe
+C:\Users\ema\Desktop\GitHub\DoubleLinkedList\Video_Kata\Video_Kata\bin\Debug\Video_Kata.pdb
+C:\Users\ema\Desktop\GitHub\DoubleLinkedList\Video_Kata\Video_Kata\obj\Debug\Video_Kata.csprojResolveAssemblyReference.cache
