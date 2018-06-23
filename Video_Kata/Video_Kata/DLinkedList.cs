@@ -22,14 +22,14 @@ namespace Video_Kata
             
         }
 
-        public DLinkNode Head,Tail;
+        public DLinkNode Head, Tail;
         public int Size { get; private set; }
 
         public void Add(String value)
         {
             DLinkNode NewNode = new DLinkNode(value);
 
-            if(Size == 0)
+            if (Size == 0)
             {
                 Head = Tail = NewNode;
                 Size++;
@@ -59,9 +59,10 @@ namespace Video_Kata
                     cur = cur.next;
                 }
             }
-           
-            return null;   
+
+            return null;
         }
+
 
         public void Delete(String Value)
         {
@@ -73,14 +74,7 @@ namespace Video_Kata
                 {
                     if (i == 0)
                     {
-                        Head = Head.next;
-
-                        if (Size != 1)
-                            cur.next.prev = null;
-                        else
-                            Tail = null;
-
-                        Size--;
+                        DeleteFirst(cur);
                         return;
                     }
 
@@ -102,24 +96,41 @@ namespace Video_Kata
                     cur = cur.next;
                 }
             }
-
         }
 
+        private void DeleteFirst(DLinkNode cur)
+        {
+            Head = Head.next;
+
+            if (Size != 1)
+                cur.next.prev = null;
+            else
+                Tail = null;
+
+            Size--;
+            return;
+        }
 
         override public String ToString()
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("(");
             DLinkNode cur = Head;
+
             while (cur != null)
             {
-                if (cur != Head)
-                    sb.Append(", ");
-                sb.Append(cur.Value);
-                cur = cur.next;
+                Add_ToString(ref sb, ref cur);
             }
             sb.Append(")");
             return sb.ToString();
+        }
+
+        private void Add_ToString(ref StringBuilder sb, ref DLinkNode cur)
+        {
+            if (cur != Head)
+                sb.Append(", ");
+            sb.Append(cur.Value);
+            cur = cur.next;
         }
 
         public void Preprend(DLinkedList L)
@@ -127,7 +138,7 @@ namespace Video_Kata
             if (L.Size == 0)
                 return;
 
-           if(this.Size == 0)
+            if (this.Size == 0)
             {
                 this.Head = L.Head;
                 this.Tail = L.Tail;
@@ -146,9 +157,6 @@ namespace Video_Kata
 
             L.Head = L.Tail = null;
             L.Size = 0;
-
         }
-
-
     }
 }

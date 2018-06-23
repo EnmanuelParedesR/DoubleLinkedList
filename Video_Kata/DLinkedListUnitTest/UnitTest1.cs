@@ -42,6 +42,17 @@ namespace DLinkedListUnitTest
             Assert.AreNotEqual("Hermano", DL.FindNode("Hermano"));
         }
 
+        [TestMethod]
+        public void DeleteANoExistingNode()
+        {
+            DLinkedList DL = new DLinkedList();
+
+            DL.Add("Hermano");
+
+            DL.Delete("Primo");
+            
+            Assert.AreNotEqual("Primo", DL.FindNode("Primo"));
+        }
 
         [TestMethod]
         public void GeneralDelete()
@@ -82,8 +93,6 @@ namespace DLinkedListUnitTest
             Assert.AreEqual("(Hermano, Amigo)", DL.ToString());
         }
 
-    
-
         [TestMethod]
         public void PreprendTwoListWhenFirstIsEmpty()
         {
@@ -112,6 +121,18 @@ namespace DLinkedListUnitTest
 
             Assert.AreEqual("(Jesus, Hermano, Amigo)", DL.ToString());
         }
+
+        [TestMethod]
+        public void PreprendTwoEmptyList()
+        {
+            DLinkedList DL = new DLinkedList();
+            DLinkedList DL2 = new DLinkedList();
+
+            DL.Preprend(DL2);
+
+            Assert.AreEqual("()", DL.ToString());
+        }
+
 
 
     }
